@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  whisper_server:
+    build:
+      context: .
+      dockerfile: DockerfileWhisper
+    ports:
+      - "5000:5000"
+
+  vosk_server:
+    build:
+      context: .
+      dockerfile: DockerfileVosk
+    ports:
+      - "2700:2700"
