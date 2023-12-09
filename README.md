@@ -26,4 +26,4 @@ docker compose up -d
 ```
 
 
- docker build - < DockerfileWhisper
+docker build . --file DockerfileWhisper
