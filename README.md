@@ -20,14 +20,24 @@ python vosk_server.py
 ```
 
 ### Docker compose
+Use docker compose to build both docker images.
 ```shell
 docker compose build
 docker compose up -d
 ```
 
 
-docker build . --file DockerfileWhisper
+### Docker commands 
+```shell
+# build
+docker build . -t whisper --file DockerfileWhisper
 
-docker run -d -p 5000:5000 386ff722b7dc
+# run
+docker run -d -p 5000:5000 whisper
 
+# stop
+docker ps stop <id>
+
+# remove stopped containers
 docker rm $(docker ps --filter status=exited -q)
+```
