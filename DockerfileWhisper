@@ -13,4 +13,4 @@ RUN bash download.sh
 
 EXPOSE 5000
 
-CMD ["python", "server.py"]
+CMD ["python", "whisper_server.py"]
