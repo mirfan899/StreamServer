@@ -23,4 +23,4 @@ async def run_test(uri):
         await websocket.close()
 
 
-asyncio.run(run_test('ws://localhost:8765'))
+asyncio.run(run_test('ws://0.0.0.0:5000'))

@@ -29,3 +29,5 @@ docker compose up -d
 docker build . --file DockerfileWhisper
 
 docker run -d -p 5000:5000 386ff722b7dc
+
+docker rm $(docker ps --filter status=exited -q)

@@ -38,8 +38,8 @@ async def handle_connection(websocket: websockets.WebSocketClientProtocol):
 
 
 async def start_server():
-    async with websockets.serve(handle_connection, "0.0.0.0", 8765):
-        print("Server started on ws://0.0.0.0:8765")
+    async with websockets.serve(handle_connection, "0.0.0.0", 5000):
+        print("Server started on ws://0.0.0.0:5000")
         await asyncio.Future()
 
 
