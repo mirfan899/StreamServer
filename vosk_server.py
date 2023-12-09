@@ -89,14 +89,14 @@ async def start():
 
     args = type('', (), {})()
 
-    args.interface = os.environ.get('VOSK_SERVER_INTERFACE', '0.0.0.0')
-    args.port = int(os.environ.get('VOSK_SERVER_PORT', 2700))
+    args.interface = os.environ.get("VOSK_SERVER_INTERFACE", "0.0.0.0")
+    args.port = int(os.environ.get("VOSK_SERVER_PORT", 2700))
     args.model_path = "./vosk-model"
-    args.spk_model_path = os.environ.get('VOSK_SPK_MODEL_PATH')
+    args.spk_model_path = os.environ.get("VOSK_SPK_MODEL_PATH")
     # args.spk_model_path = "./vosk-model"
-    args.sample_rate = float(os.environ.get('VOSK_SAMPLE_RATE', 16000))
-    args.max_alternatives = int(os.environ.get('VOSK_ALTERNATIVES', 0))
-    args.show_words = bool(os.environ.get('VOSK_SHOW_WORDS', False))
+    args.sample_rate = float(os.environ.get("VOSK_SAMPLE_RATE", 16000))
+    args.max_alternatives = int(os.environ.get("VOSK_ALTERNATIVES", 0))
+    args.show_words = bool(os.environ.get("VOSK_SHOW_WORDS", False))
 
     model = Model(args.model_path)
     spk_model = SpkModel(args.spk_model_path) if args.spk_model_path else None
