@@ -4,6 +4,7 @@ WORKDIR app/
 
 COPY . .
 
+RUN apt-get install portaudio19-dev python-all-dev
 RUN apt update
 RUN pip install --upgrade pip setuptools
 RUN pip install wheel
