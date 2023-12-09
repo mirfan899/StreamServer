@@ -5,9 +5,7 @@ WORKDIR app/
 COPY . .
 
 RUN apt update
-RUN apt-get install -y pulseaudio
-RUN apt-get install -y ffmpeg
-RUN apt-get install portaudio19-dev python-all-dev
+RUN apt-get install pulseaudio portaudio19-dev python-all-dev ffmpeg -y
 RUN pip install --upgrade pip setuptools
 RUN pip install wheel
 RUN pip install -r requirements.txt --no-cache-dir
